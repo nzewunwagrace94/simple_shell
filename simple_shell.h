@@ -10,11 +10,17 @@
 #include <sys/stat.h>
 #include <stdlib.h>
 #include <sys/wait.h>
+#include <fcntl.h>
 
-void _print(const char *text);
+/* prototypes for all functions */
+
 int main(void);
-void exec_command(const char *commands);
+int main(void);
 void prompt_display(void);
-void read_input(char *command, size_t size);
+void execute_command(char *command);
+char *read_command();
+void handle_error(char *message);
+extern char **environ;
+void writeoutput(const char *message);
 
-#endif
+#endif /* SIMPLE_SHELL_H */
