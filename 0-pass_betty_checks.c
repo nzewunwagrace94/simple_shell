@@ -1,12 +1,12 @@
 #include "simple_shell.h"
 
 /**
- * main - get the PID
+ * getpid - get the PID
  *
  * Return: Always 0 as success
  */
 
-int main(void)
+int getpid(void)
 {
 	pid_t my_pid;
 
